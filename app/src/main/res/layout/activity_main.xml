@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Calculadora Gorjeta - Padaria"
+        android:textColor="#010d33"
+        android:textSize="28dp"
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Valor Total:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/preco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textGorjeta"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Gorjeta aqui: %"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/porcentGorjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Você deseja dividir a conta para 2 pessoas ?"
+        android:textSize="17dp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/valorMoeda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Você deseja pagar em qual das moedas abaixo ?"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBoxEuro"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Euro" />
+
+        <CheckBox
+            android:id="@+id/checkBoxReal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Real" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDollar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:text="Dollar" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calcular_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:text="calcular preço gorgeta"
+
+        />
+
+    <TextView
+        android:id="@+id/resposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animacaoChuva"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+
+        app:lottie_fileName="chuva.json" />
+</LinearLayout>
